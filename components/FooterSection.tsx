@@ -55,7 +55,7 @@ export default function FooterSection() {
             className="font-jost text-xs opacity-30 mt-2"
             style={{ fontWeight: 300 }}
           >
-            © {new Date().getFullYear()} beurre. Pastries — All rights reserved
+            © {new Date().getFullYear()} beurre. Pastries. All rights reserved
           </p>
         </motion.div>
 

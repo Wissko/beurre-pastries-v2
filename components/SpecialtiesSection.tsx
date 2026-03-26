@@ -9,33 +9,33 @@ const EASE_LUXURY = [0.22, 1, 0.36, 1] as const;
 const specialties = [
   {
     name: "Croissant",
-    description: "Seventy-two hours of lamination. Shatters, then melts.",
-    image: "/images/p1.jpg",
+    description: "Classic laminated dough. 72-hour process, AOP butter. Honey-brown crust, open crumb, nothing to hide.",
+    image: "/images/cafecroissant.jpg",
   },
   {
     name: "Pain au Chocolat",
-    description: "Valrhona dark. Butter. The rest is silence.",
-    image: "/images/p2.jpg",
+    description: "Belgian dark chocolate, twice-wrapped in buttery layers. Best warm, first thing.",
+    image: "/images/fraise.jpg",
   },
   {
     name: "Cinnamon Monkey Cube",
-    description: "Pull-apart, spiced, improbably tender.",
-    image: "/images/p3.jpg",
+    description: "Pull-apart brioche, cinnamon sugar, baked in a block. Order it while you still can.",
+    image: "/images/poudre.jpg",
   },
   {
     name: "Black Sesame Morning Bun",
-    description: "Deep nuttiness, yuzu glaze — morning becomes ritual.",
-    image: "/images/p4.jpg",
+    description: "Rolled in black sesame, glazed with yuzu. Edgy without trying.",
+    image: "/images/matcha.jpg",
   },
   {
     name: "Pain Suisse",
-    description: "Peanut butter, Belgian chocolate, morello cherries. A study in restraint.",
-    image: "/images/p5.jpg",
+    description: "Peanut butter, Belgian chocolate, morello cherries. Not traditional. Better.",
+    image: "/images/blanc.jpg",
   },
   {
-    name: "Seasonal",
-    description: "Whatever the market offers, elevated without compromise.",
-    image: "/images/p6.jpg",
+    name: "Seasonal Specials",
+    description: "Bespoke creations that change with what's in season. Follow @beurrepastriesbne to know first.",
+    image: "/images/confitur.jpg",
   },
 ];
 

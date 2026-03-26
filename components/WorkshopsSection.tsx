@@ -88,7 +88,7 @@ export default function WorkshopsSection() {
             transition={{ duration: 1.5, delay: 0.4, ease: EASE_LUXURY }}
           >
             No shortcuts. No machines where hands will do. Beurre&apos;s pastries
-            are shaped, scored, and finished with attention — the kind that
+            are shaped, scored, and finished with attention. The kind that
             takes years to develop and moments to disappear.
           </motion.p>
         </div>

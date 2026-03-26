@@ -18,7 +18,7 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "beurre. PASTRIES — Park Road, Milton, Brisbane",
+  title: "beurre. PASTRIES. Park Road, Milton, Brisbane",
   description:
     "Artisan pastries by Will Leung. Croissants, viennoiseries and seasonal creations. Park Road, Milton, Brisbane. Bear Bones Coffee.",
   keywords: "beurre pastries, artisan pastries, Brisbane, Milton, croissant, viennoiserie, Will Leung",

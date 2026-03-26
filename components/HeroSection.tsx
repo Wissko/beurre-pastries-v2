@@ -63,7 +63,7 @@ export default function HeroSection() {
           Park Road · Milton · Brisbane
         </motion.p>
 
-        {/* Main title — curtain lift */}
+        {/* Main title - curtain lift */}
         <div className="overflow-hidden">
           <motion.h1
             className="font-cormorant italic leading-none"

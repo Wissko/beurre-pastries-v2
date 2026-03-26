@@ -99,7 +99,7 @@ export default function AboutSection() {
             className="font-jost leading-relaxed mb-6 opacity-75"
             style={{ fontSize: "15px", maxWidth: "480px", fontWeight: 300 }}
           >
-            Will Leung grew up kneading dough before dawn — a habit formed in
+            Will Leung grew up kneading dough before dawn. A habit formed in
             Christchurch, where he built a quiet reputation as LeBakerman. His
             hands learned precision through repetition, and patience through
             failure.
@@ -122,8 +122,8 @@ export default function AboutSection() {
             className="font-jost leading-relaxed opacity-75"
             style={{ fontSize: "15px", maxWidth: "480px", fontWeight: 300 }}
           >
-            On Park Road in Milton — across from La Dolce Vita, alongside Bear
-            Bones Coffee — beurre. became a morning ritual for those who know
+            On Park Road in Milton, across from La Dolce Vita and alongside Bear
+            Bones Coffee, beurre. became a morning ritual for those who know
             the difference.
           </p>
         </RevealText>

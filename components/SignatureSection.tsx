@@ -93,7 +93,7 @@ export default function SignatureSection() {
             transition={{ duration: 1.6, delay: 0.9, ease: EASE_LUXURY }}
           >
             A croissant is not just laminated butter and flour. It is the sum of
-            a hundred small decisions — the temperature, the fold, the rest.
+            a hundred small decisions: the temperature, the fold, the rest.
             Will chooses carefully. You taste the difference.
           </motion.p>
         </div>
