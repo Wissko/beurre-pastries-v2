@@ -37,54 +37,58 @@ export default function LuxuryMenu() {
 
   return (
     <>
-      {/* Trigger — fixed left center, pill container for visibility */}
+      {/* Trigger — languette gauche avec "b." italic */}
       <motion.button
         onClick={() => setIsOpen(true)}
         aria-label="Open navigation"
-        className="fixed left-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-4 cursor-pointer"
+        className="fixed left-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-3 cursor-pointer"
         style={{
-          background: "rgba(26, 18, 8, 0.72)",
+          background: "rgba(26, 18, 8, 0.80)",
           backdropFilter: "blur(12px)",
           WebkitBackdropFilter: "blur(12px)",
           borderRadius: "0 20px 20px 0",
-          padding: "20px 14px 20px 10px",
+          padding: "22px 16px 22px 10px",
           boxShadow: "2px 0 24px rgba(26,18,8,0.18)",
-          border: "1px solid rgba(194, 96, 31, 0.25)",
+          border: "1px solid rgba(194, 96, 31, 0.3)",
           borderLeft: "none",
         }}
-        animate={{ opacity: isOpen ? 0 : 1, pointerEvents: isOpen ? "none" : "auto", x: isOpen ? -60 : 0 }}
+        animate={{
+          opacity: isOpen ? 0 : 1,
+          pointerEvents: isOpen ? "none" : "auto",
+          x: isOpen ? -60 : 0,
+        }}
         transition={{ duration: 0.4, ease: EASE_LUXURY }}
-        whileHover={{ paddingRight: "20px" }}
       >
-        {/* Losange SVG */}
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          className="transition-transform duration-700 ease-out group-hover:rotate-90"
-        >
-          <rect
-            x="12"
-            y="1.5"
-            width="14.85"
-            height="14.85"
-            transform="rotate(45 12 1.5)"
-            stroke="#c2601f"
-            strokeWidth="1.5"
-            fill="rgba(194, 96, 31, 0.15)"
-          />
-        </svg>
-        {/* Vertical "Menu" text */}
+        {/* "b." en Cormorant italique */}
         <span
-          className="font-jost tracking-[0.45em] uppercase"
+          className="font-cormorant italic"
           style={{
-            fontSize: "9px",
+            fontSize: "28px",
+            color: "#c2601f",
+            lineHeight: 1,
+            letterSpacing: "-0.02em",
+          }}
+        >
+          b.
+        </span>
+        {/* Séparateur fin */}
+        <span
+          style={{
+            display: "block",
+            width: "1px",
+            height: "18px",
+            background: "rgba(240, 237, 232, 0.2)",
+          }}
+        />
+        {/* "Menu" vertical */}
+        <span
+          className="font-jost uppercase tracking-[0.45em]"
+          style={{
+            fontSize: "8px",
             fontWeight: 400,
             writingMode: "vertical-rl",
             color: "#f0ede8",
-            opacity: 0.9,
-            letterSpacing: "0.45em",
+            opacity: 0.75,
           }}
         >
           Menu
