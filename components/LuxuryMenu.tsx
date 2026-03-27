@@ -37,18 +37,29 @@ export default function LuxuryMenu() {
 
   return (
     <>
-      {/* Trigger — fixed left center */}
+      {/* Trigger — fixed left center, pill container for visibility */}
       <motion.button
         onClick={() => setIsOpen(true)}
         aria-label="Open navigation"
-        className="fixed left-6 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-5 group cursor-pointer"
-        animate={{ opacity: isOpen ? 0 : 1, pointerEvents: isOpen ? "none" : "auto" }}
-        transition={{ duration: 0.3 }}
+        className="fixed left-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-4 cursor-pointer"
+        style={{
+          background: "rgba(26, 18, 8, 0.72)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          borderRadius: "0 20px 20px 0",
+          padding: "20px 14px 20px 10px",
+          boxShadow: "2px 0 24px rgba(26,18,8,0.18)",
+          border: "1px solid rgba(194, 96, 31, 0.25)",
+          borderLeft: "none",
+        }}
+        animate={{ opacity: isOpen ? 0 : 1, pointerEvents: isOpen ? "none" : "auto", x: isOpen ? -60 : 0 }}
+        transition={{ duration: 0.4, ease: EASE_LUXURY }}
+        whileHover={{ paddingRight: "20px" }}
       >
-        {/* Losange SVG — bigger, fully visible */}
+        {/* Losange SVG */}
         <svg
-          width="24"
-          height="24"
+          width="20"
+          height="20"
           viewBox="0 0 24 24"
           fill="none"
           className="transition-transform duration-700 ease-out group-hover:rotate-90"
@@ -61,18 +72,19 @@ export default function LuxuryMenu() {
             transform="rotate(45 12 1.5)"
             stroke="#c2601f"
             strokeWidth="1.5"
-            fill="rgba(194, 96, 31, 0.08)"
+            fill="rgba(194, 96, 31, 0.15)"
           />
         </svg>
         {/* Vertical "Menu" text */}
         <span
-          className="font-jost tracking-[0.5em] uppercase"
+          className="font-jost tracking-[0.45em] uppercase"
           style={{
-            fontSize: "11px",
+            fontSize: "9px",
             fontWeight: 400,
             writingMode: "vertical-rl",
-            color: "#1a1208",
-            opacity: 0.85,
+            color: "#f0ede8",
+            opacity: 0.9,
+            letterSpacing: "0.45em",
           }}
         >
           Menu
@@ -94,7 +106,7 @@ export default function LuxuryMenu() {
             <button
               onClick={close}
               aria-label="Close navigation"
-              className="absolute top-8 right-8 group p-2 cursor-pointer"
+              className="absolute top-8 right-8 p-2 cursor-pointer"
             >
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <line x1="4" y1="4" x2="24" y2="24" stroke="#f0ede8" strokeWidth="1" strokeOpacity="0.6" />
