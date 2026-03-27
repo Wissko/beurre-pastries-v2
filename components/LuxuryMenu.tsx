@@ -22,26 +22,17 @@ export default function LuxuryMenu() {
 
   const close = useCallback(() => setIsOpen(false), []);
 
-  // Close on route change
-  useEffect(() => {
-    close();
-  }, [pathname, close]);
+  useEffect(() => { close(); }, [pathname, close]);
 
-  // Close on Escape
   useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") close();
-    };
+    const handleKey = (e: KeyboardEvent) => { if (e.key === "Escape") close(); };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [close]);
 
-  // Lock body scroll when open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
+    return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
   return (
@@ -50,39 +41,38 @@ export default function LuxuryMenu() {
       <motion.button
         onClick={() => setIsOpen(true)}
         aria-label="Open navigation"
-        className="fixed left-6 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-4 group cursor-pointer"
+        className="fixed left-6 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-5 group cursor-pointer"
         animate={{ opacity: isOpen ? 0 : 1, pointerEvents: isOpen ? "none" : "auto" }}
         transition={{ duration: 0.3 }}
       >
-        {/* Losange SVG */}
+        {/* Losange SVG — bigger, fully visible */}
         <svg
-          width="13"
-          height="13"
-          viewBox="0 0 13 13"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
           fill="none"
           className="transition-transform duration-700 ease-out group-hover:rotate-90"
         >
           <rect
-            x="6.5"
-            y="0.8"
-            width="8.2"
-            height="8.2"
-            rx="0"
-            transform="rotate(45 6.5 0.8)"
-            stroke="#1a1208"
-            strokeWidth="0.75"
-            strokeOpacity="0.5"
-            fill="none"
+            x="12"
+            y="1.5"
+            width="14.85"
+            height="14.85"
+            transform="rotate(45 12 1.5)"
+            stroke="#c2601f"
+            strokeWidth="1.5"
+            fill="rgba(194, 96, 31, 0.08)"
           />
         </svg>
         {/* Vertical "Menu" text */}
         <span
-          className="font-jost text-[9px] tracking-[0.5em] uppercase"
+          className="font-jost tracking-[0.5em] uppercase"
           style={{
-            fontWeight: 300,
+            fontSize: "11px",
+            fontWeight: 400,
             writingMode: "vertical-rl",
             color: "#1a1208",
-            opacity: 0.4,
+            opacity: 0.85,
           }}
         >
           Menu
@@ -106,16 +96,9 @@ export default function LuxuryMenu() {
               aria-label="Close navigation"
               className="absolute top-8 right-8 group p-2 cursor-pointer"
             >
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                <line
-                  x1="3" y1="3" x2="19" y2="19"
-                  stroke="#f0ede8" strokeWidth="0.75" strokeOpacity="0.4"
-                  style={{ transition: "stroke-opacity 0.3s" }}
-                />
-                <line
-                  x1="19" y1="3" x2="3" y2="19"
-                  stroke="#f0ede8" strokeWidth="0.75" strokeOpacity="0.4"
-                />
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <line x1="4" y1="4" x2="24" y2="24" stroke="#f0ede8" strokeWidth="1" strokeOpacity="0.6" />
+                <line x1="24" y1="4" x2="4" y2="24" stroke="#f0ede8" strokeWidth="1" strokeOpacity="0.6" />
               </svg>
             </button>
 
@@ -131,11 +114,7 @@ export default function LuxuryMenu() {
                     initial={{ y: "105%", opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: "105%", opacity: 0 }}
-                    transition={{
-                      duration: 0.85,
-                      delay: i * 0.06,
-                      ease: EASE_LUXURY,
-                    }}
+                    transition={{ duration: 0.85, delay: i * 0.06, ease: EASE_LUXURY }}
                   >
                     <Link
                       href={item.href}
@@ -156,11 +135,7 @@ export default function LuxuryMenu() {
                       </span>
                       <span
                         className="font-jost text-[10px] tracking-[0.35em] uppercase"
-                        style={{
-                          fontWeight: 300,
-                          color: "#f0ede8",
-                          opacity: 0.18,
-                        }}
+                        style={{ fontWeight: 300, color: "#f0ede8", opacity: 0.25 }}
                       >
                         0{i + 1}
                       </span>
@@ -179,7 +154,7 @@ export default function LuxuryMenu() {
             >
               <p
                 className="font-jost text-[10px] tracking-[0.35em] uppercase"
-                style={{ color: "#f0ede8", opacity: 0.18, fontWeight: 300 }}
+                style={{ color: "#f0ede8", opacity: 0.25, fontWeight: 300 }}
               >
                 Park Road · Milton · Brisbane · @beurrepastriesbne
               </p>
