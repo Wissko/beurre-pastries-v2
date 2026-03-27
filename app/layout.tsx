@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
+import LuxuryMenu from "@/components/LuxuryMenu";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -21,7 +22,8 @@ export const metadata: Metadata = {
   title: "beurre. PASTRIES. Park Road, Milton, Brisbane",
   description:
     "Artisan pastries by Will Leung. Croissants, viennoiseries and seasonal creations. Park Road, Milton, Brisbane. Bear Bones Coffee.",
-  keywords: "beurre pastries, artisan pastries, Brisbane, Milton, croissant, viennoiserie, Will Leung",
+  keywords:
+    "beurre pastries, artisan pastries, Brisbane, Milton, croissant, viennoiserie, Will Leung",
   openGraph: {
     title: "beurre. PASTRIES",
     description: "Artisan pastries. Park Road · Milton · Brisbane.",
@@ -36,7 +38,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${jost.variable}`}>
-      <body className="bg-cream text-espresso antialiased">{children}</body>
+      <body className="bg-cream text-espresso antialiased">
+        <LuxuryMenu />
+        {children}
+      </body>
     </html>
   );
 }
