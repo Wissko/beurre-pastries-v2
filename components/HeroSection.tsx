@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
@@ -96,27 +96,6 @@ export default function HeroSection() {
             Pastries
           </motion.p>
         </div>
-      </motion.div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.45 }}
-        transition={{ duration: 1.4, delay: 2.0, ease: EASE_LUXURY }}
-      >
-        <span
-          className="font-jost text-xs tracking-[0.3em] uppercase"
-          style={{ color: "#1a1208", fontWeight: 300 }}
-        >
-          Scroll
-        </span>
-        <motion.div
-          className="w-px h-12"
-          style={{ backgroundColor: "#1a1208", opacity: 0.35 }}
-          animate={{ scaleY: [1, 0.4, 1] }}
-          transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-        />
       </motion.div>
     </section>
   );
