@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
 import FooterSection from "@/components/FooterSection";
 
 const EASE_LUXURY = [0.22, 1, 0.36, 1] as const;
@@ -19,39 +18,8 @@ export default function VisitPage() {
 
   return (
     <main>
-      {/* ── Hero Image ─────────────────────────────────── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "50vh" }}>
-        <Image
-          src="/images/beurre.jpg"
-          alt="Beurre Pastries"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: "rgba(26,18,8,0.5)" }}
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <motion.h2
-            className="font-cormorant italic text-white text-center leading-none"
-            style={{
-              fontSize: "clamp(48px, 8vw, 110px)",
-              letterSpacing: "-0.02em",
-            }}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.6, ease: EASE_LUXURY }}
-          >
-            Come find us.
-          </motion.h2>
-        </div>
-      </section>
-
-      {/* ── Info Section ────────────────────────────────── */}
       <section
-        className="relative py-40 px-6 overflow-hidden"
+        className="relative min-h-screen py-40 px-6 overflow-hidden"
         style={{ backgroundColor: "#f0ede8" }}
       >
         {/* Ghost text */}
@@ -73,7 +41,6 @@ export default function VisitPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto">
-          {/* Chapter header */}
           <div ref={titleRef} className="mb-28">
             <div className="overflow-hidden mb-6">
               <motion.p
@@ -86,116 +53,75 @@ export default function VisitPage() {
                 Chapter 04 · Find Us
               </motion.p>
             </div>
+            <div className="overflow-hidden">
+              <motion.h1
+                className="font-cormorant italic leading-none"
+                style={{
+                  fontSize: "clamp(60px, 8vw, 110px)",
+                  color: "#1a1208",
+                  letterSpacing: "-0.02em",
+                }}
+                initial={{ y: "110%" }}
+                animate={inView ? { y: 0 } : {}}
+                transition={{ duration: 1.6, delay: 0.15, ease: EASE_LUXURY }}
+              >
+                Come find us.
+              </motion.h1>
+            </div>
           </div>
 
-          {/* Three-column info grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24">
-            {/* Location */}
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 1.4, delay: 0.2, ease: EASE_LUXURY }}
             >
-              <p
-                className="font-jost text-xs tracking-[0.3em] uppercase opacity-35 mb-7"
-                style={{ fontWeight: 300 }}
-              >
-                Location
+              <p className="font-jost text-xs tracking-[0.3em] uppercase opacity-35 mb-7" style={{ fontWeight: 300 }}>Location</p>
+              <p className="font-cormorant italic leading-snug mb-3" style={{ fontSize: "30px", color: "#1a1208" }}>
+                Park Road<br />Milton, Brisbane
               </p>
-              <p
-                className="font-cormorant italic leading-snug mb-3"
-                style={{ fontSize: "30px", color: "#1a1208" }}
-              >
-                Park Road
-                <br />
-                Milton, Brisbane
-              </p>
-              <p
-                className="font-jost opacity-40 mt-2"
-                style={{ fontSize: "13px", fontWeight: 300 }}
-              >
-                Opposite La Dolce Vita
-              </p>
+              <p className="font-jost opacity-40 mt-2" style={{ fontSize: "13px", fontWeight: 300 }}>Opposite La Dolce Vita</p>
             </motion.div>
 
-            {/* Hours */}
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 1.4, delay: 0.35, ease: EASE_LUXURY }}
             >
-              <p
-                className="font-jost text-xs tracking-[0.3em] uppercase opacity-35 mb-7"
-                style={{ fontWeight: 300 }}
-              >
-                Hours
-              </p>
+              <p className="font-jost text-xs tracking-[0.3em] uppercase opacity-35 mb-7" style={{ fontWeight: 300 }}>Hours</p>
               <div className="space-y-4">
                 {hours.map(({ day, time }) => (
                   <div key={day}>
-                    <p
-                      className="font-jost opacity-65"
-                      style={{ fontSize: "14px", fontWeight: 300 }}
-                    >
-                      {day}
-                    </p>
-                    <p
-                      className="font-jost opacity-35"
-                      style={{ fontSize: "13px", fontWeight: 300 }}
-                    >
-                      {time}
-                    </p>
+                    <p className="font-jost opacity-65" style={{ fontSize: "14px", fontWeight: 300 }}>{day}</p>
+                    <p className="font-jost opacity-35" style={{ fontSize: "13px", fontWeight: 300 }}>{time}</p>
                   </div>
                 ))}
               </div>
             </motion.div>
 
-            {/* Coffee & Social */}
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 1.4, delay: 0.5, ease: EASE_LUXURY }}
             >
-              <p
-                className="font-jost text-xs tracking-[0.3em] uppercase opacity-35 mb-7"
-                style={{ fontWeight: 300 }}
-              >
-                Coffee
-              </p>
-              <p
-                className="font-cormorant italic mb-10"
-                style={{ fontSize: "26px", color: "#1a1208" }}
-              >
-                Bear Bones Coffee
-              </p>
-
-              <p
-                className="font-jost text-xs tracking-[0.3em] uppercase opacity-35 mb-4"
-                style={{ fontWeight: 300 }}
-              >
-                Follow
-              </p>
+              <p className="font-jost text-xs tracking-[0.3em] uppercase opacity-35 mb-7" style={{ fontWeight: 300 }}>Coffee</p>
+              <p className="font-cormorant italic mb-10" style={{ fontSize: "26px", color: "#1a1208" }}>Bear Bones Coffee</p>
+              <p className="font-jost text-xs tracking-[0.3em] uppercase opacity-35 mb-4" style={{ fontWeight: 300 }}>Follow</p>
               <a
                 href="https://instagram.com/beurrepastriesbne"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-jost text-xs tracking-[0.25em] uppercase"
-                style={{
-                  color: "#c2601f",
-                  opacity: 0.7,
-                  fontWeight: 300,
-                  textDecoration: "none",
-                }}
+                style={{ color: "#c2601f", opacity: 0.7, fontWeight: 300, textDecoration: "none" }}
               >
                 @beurrepastriesbne
               </a>
             </motion.div>
           </div>
 
-          {/* Decorative rule */}
           <motion.div
             className="mt-28 w-12 h-px"
             style={{ backgroundColor: "#c2601f" }}
@@ -206,96 +132,6 @@ export default function VisitPage() {
           />
         </div>
       </section>
-
-      {/* ── Ambiance Photo ────────────────────────────────── */}
-      <section className="px-6 py-12" style={{ backgroundColor: "#f0ede8" }}>
-        <div className="max-w-5xl mx-auto">
-          <motion.div
-            className="relative overflow-hidden rounded-2xl"
-            style={{ minHeight: "clamp(260px, 35vw, 500px)" }}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 1.6, ease: EASE_LUXURY }}
-          >
-            <Image
-              src="/images/life.jpg"
-              alt="A morning ritual at Beurre"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1280px) 100vw, 1280px"
-            />
-            <div
-              className="absolute inset-0"
-              style={{ background: "rgba(26,18,8,0.25)" }}
-            />
-            <div className="absolute bottom-0 left-0 p-8">
-              <p
-                className="font-jost text-white uppercase tracking-[0.3em] opacity-80"
-                style={{ fontSize: "11px", fontWeight: 300 }}
-              >
-                A morning ritual.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── Map / Address Cell ────────────────────────────── */}
-      <section className="px-6 pb-16" style={{ backgroundColor: "#f0ede8" }}>
-        <div className="max-w-5xl mx-auto">
-          <motion.div
-            className="rounded-2xl px-10 md:px-16 py-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8"
-            style={{ backgroundColor: "#1a1208" }}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 1.6, ease: EASE_LUXURY }}
-          >
-            <div>
-              <p
-                className="font-jost uppercase tracking-[0.3em] mb-4 opacity-40"
-                style={{ fontSize: "11px", fontWeight: 300, color: "#f0ede8" }}
-              >
-                Find us
-              </p>
-              <p
-                className="font-cormorant italic leading-tight"
-                style={{
-                  fontSize: "clamp(28px, 4vw, 52px)",
-                  color: "#f0ede8",
-                  letterSpacing: "-0.01em",
-                }}
-              >
-                Park Road,
-                <br />
-                Milton, Brisbane
-              </p>
-              <p
-                className="font-jost mt-3 opacity-40"
-                style={{ fontSize: "13px", fontWeight: 300, color: "#f0ede8" }}
-              >
-                Opposite La Dolce Vita
-              </p>
-            </div>
-            <a
-              href="https://maps.google.com/?q=Beurre+Pastries+Milton+Brisbane"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-jost text-xs tracking-[0.3em] uppercase border py-4 px-8 shrink-0"
-              style={{
-                borderColor: "rgba(240,237,232,0.3)",
-                color: "#f0ede8",
-                fontWeight: 300,
-                textDecoration: "none",
-              }}
-            >
-              Open in Maps
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
       <FooterSection />
     </main>
   );
