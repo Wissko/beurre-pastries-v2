@@ -9,7 +9,7 @@ const EASE_LUXURY = [0.22, 1, 0.36, 1] as const;
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "The Collection", href: "/collection" },
+  { label: "Menu", href: "/collection" },
   { label: "Find Us", href: "/visit" },
   {
     label: "Gift Card",
