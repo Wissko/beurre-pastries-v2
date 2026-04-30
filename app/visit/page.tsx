@@ -12,6 +12,11 @@ const hours = [
   { day: "Mon – Tue", time: "Closed" },
 ];
 
+const locationLabel = "Park Road, Milton, Brisbane";
+const locationNote = "Opposite La Dolce Vita";
+const mapsQuery = encodeURIComponent(`${locationLabel} ${locationNote}`);
+const mapsHref = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
+
 export default function VisitPage() {
   const titleRef = useRef<HTMLDivElement>(null);
   const inView = useInView(titleRef, { once: true, margin: "-80px" });
@@ -81,7 +86,32 @@ export default function VisitPage() {
               <p className="font-cormorant italic leading-snug mb-3" style={{ fontSize: "30px", color: "#1a1208" }}>
                 Park Road<br />Milton, Brisbane
               </p>
-              <p className="font-jost opacity-40 mt-2" style={{ fontSize: "13px", fontWeight: 300 }}>Opposite La Dolce Vita</p>
+              <p className="font-jost opacity-40 mt-2" style={{ fontSize: "13px", fontWeight: 300 }}>{locationNote}</p>
+              <a
+                href={mapsHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${locationLabel} in Google Maps`}
+                className="group inline-flex items-center gap-3 mt-8 rounded-full border px-5 py-3 font-jost text-[11px] uppercase tracking-[0.28em] transition-all duration-500 hover:-translate-y-0.5"
+                style={{
+                  borderColor: "rgba(194, 96, 31, 0.28)",
+                  color: "#1a1208",
+                  backgroundColor: "rgba(250, 248, 244, 0.58)",
+                  fontWeight: 300,
+                  textDecoration: "none",
+                  backdropFilter: "blur(10px)",
+                  WebkitBackdropFilter: "blur(10px)",
+                }}
+              >
+                <span>Open in Maps</span>
+                <span
+                  aria-hidden
+                  className="text-base leading-none transition-transform duration-500 group-hover:translate-x-0.5"
+                  style={{ color: "#c2601f" }}
+                >
+                  ↗
+                </span>
+              </a>
             </motion.div>
 
             <motion.div
