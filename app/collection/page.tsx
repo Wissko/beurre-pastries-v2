@@ -55,123 +55,57 @@ const menuSections = [
 export default function CollectionPage() {
   return (
     <main style={{ backgroundColor: "#f0ede8", color: "#1a1208" }}>
-      <section className="px-4 pt-24 pb-14 sm:px-6 sm:pt-28 lg:px-8 lg:pt-32 lg:pb-20">
+      <section className="px-4 pt-24 pb-10 sm:px-6 sm:pt-28 lg:px-8 lg:pt-32 lg:pb-14">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:gap-10">
-            <div
-              className="relative overflow-hidden rounded-[28px] border"
-              style={{
-                borderColor: "rgba(26, 18, 8, 0.08)",
-                boxShadow: "0 24px 80px rgba(26, 18, 8, 0.08)",
-              }}
-            >
-              <div className="relative aspect-[4/5] sm:aspect-[16/10] lg:aspect-[18/8]">
-                <Image
-                  src="/images/hero.jpg"
-                  alt="Selection of Beurre pastries"
-                  fill
-                  priority
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 1200px, 100vw"
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, rgba(240,237,232,0.08) 0%, rgba(26,18,8,0.1) 42%, rgba(26,18,8,0.58) 100%)",
-                  }}
-                />
-              </div>
-
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-10">
-                <div className="max-w-2xl">
-                  <p
-                    className="mb-4 font-jost text-[11px] uppercase tracking-[0.36em]"
-                    style={{ color: "rgba(240, 237, 232, 0.78)", fontWeight: 300 }}
-                  >
-                    Beurre Pastries
-                  </p>
-                  <h1
-                    className="font-cormorant italic leading-[0.92]"
-                    style={{
-                      color: "#f0ede8",
-                      fontSize: "clamp(52px, 9vw, 108px)",
-                      letterSpacing: "-0.03em",
-                    }}
-                  >
-                    Menu
-                  </h1>
-                  <p
-                    className="mt-3 max-w-xl font-jost leading-[1.8] text-[14px] sm:text-[15px]"
-                    style={{ color: "rgba(240, 237, 232, 0.82)", fontWeight: 300 }}
-                  >
-                    A concise edit of our daily pastries, signature bakes and seasonal pieces. Made with a classic French base and a little room for surprise.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:gap-12">
+          <div
+            className="relative overflow-hidden rounded-[28px] border"
+            style={{
+              borderColor: "rgba(26, 18, 8, 0.08)",
+              boxShadow: "0 24px 80px rgba(26, 18, 8, 0.08)",
+            }}
+          >
+            <div className="relative aspect-[4/5] sm:aspect-[16/10] lg:aspect-[18/8]">
+              <Image
+                src="/images/cafecroissant.jpg"
+                alt="Coffee and croissant at Beurre"
+                fill
+                priority
+                className="object-cover"
+                sizes="(min-width: 1024px) 1200px, 100vw"
+              />
               <div
-                className="rounded-[24px] border px-6 py-7 sm:px-8"
-                style={{
-                  backgroundColor: "#f7f3ed",
-                  borderColor: "rgba(26, 18, 8, 0.08)",
-                }}
-              >
-                <p
-                  className="font-jost text-[11px] uppercase tracking-[0.34em] opacity-50"
-                  style={{ fontWeight: 300 }}
-                >
-                  In store selection
-                </p>
-                <p
-                  className="mt-5 font-cormorant leading-[1]"
-                  style={{
-                    fontSize: "clamp(34px, 4.5vw, 52px)",
-                    letterSpacing: "-0.02em",
-                  }}
-                >
-                  Crafted fresh every morning.
-                </p>
-                <p
-                  className="mt-5 max-w-md font-jost text-[14px] leading-[1.9]"
-                  style={{ color: "rgba(26, 18, 8, 0.7)", fontWeight: 300 }}
-                >
-                  The menu stays intentionally focused. Core favourites anchor the counter, while signature and seasonal pieces shift with the rhythm of the kitchen.
-                </p>
-              </div>
-
-              <div
-                className="rounded-[24px] border px-6 py-7 sm:px-8"
+                className="absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(180deg, rgba(237,232,224,0.88) 0%, rgba(247,243,237,0.96) 100%)",
-                  borderColor: "rgba(26, 18, 8, 0.08)",
+                    "linear-gradient(180deg, rgba(240,237,232,0.08) 0%, rgba(26,18,8,0.1) 42%, rgba(26,18,8,0.58) 100%)",
                 }}
-              >
-                <div className="grid gap-4 sm:grid-cols-3 sm:gap-6">
-                  {[
-                    ["Style", "French technique, modern flavour"],
-                    ["Best time", "Morning counter and weekend pick-up"],
-                    ["Notes", "Ask the team for limited daily extras"],
-                  ].map(([label, value]) => (
-                    <div key={label} className="border-t pt-4" style={{ borderColor: "rgba(194, 96, 31, 0.2)" }}>
-                      <p
-                        className="font-jost text-[10px] uppercase tracking-[0.32em]"
-                        style={{ color: "rgba(26, 18, 8, 0.42)", fontWeight: 300 }}
-                      >
-                        {label}
-                      </p>
-                      <p
-                        className="mt-3 font-jost text-[14px] leading-[1.75]"
-                        style={{ color: "rgba(26, 18, 8, 0.76)", fontWeight: 300 }}
-                      >
-                        {value}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+              />
+            </div>
+
+            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-10">
+              <div className="max-w-2xl">
+                <p
+                  className="mb-4 font-jost text-[11px] uppercase tracking-[0.36em]"
+                  style={{ color: "rgba(240, 237, 232, 0.78)", fontWeight: 300 }}
+                >
+                  Beurre Pastries
+                </p>
+                <h1
+                  className="font-cormorant italic leading-[0.92]"
+                  style={{
+                    color: "#f0ede8",
+                    fontSize: "clamp(52px, 9vw, 108px)",
+                    letterSpacing: "-0.03em",
+                  }}
+                >
+                  Menu
+                </h1>
+                <p
+                  className="mt-3 max-w-xl font-jost leading-[1.8] text-[14px] sm:text-[15px]"
+                  style={{ color: "rgba(240, 237, 232, 0.82)", fontWeight: 300 }}
+                >
+                  A concise edit of our daily pastries, signature bakes and seasonal pieces. Made with a classic French base and a little room for surprise.
+                </p>
               </div>
             </div>
           </div>
@@ -212,7 +146,7 @@ export default function CollectionPage() {
                   {section.items.map((item, itemIndex) => (
                     <div
                       key={item.name}
-                      className="grid gap-4 border-t py-5 first:pt-0 first:border-t-0 sm:grid-cols-[72px_minmax(0,1fr)] sm:gap-6"
+                      className="grid gap-4 border-t py-5 first:border-t-0 first:pt-0 sm:grid-cols-[72px_minmax(0,1fr)] sm:gap-6"
                       style={{ borderColor: "rgba(26, 18, 8, 0.08)" }}
                     >
                       <span
