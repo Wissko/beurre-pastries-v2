@@ -51,18 +51,6 @@ export default function WorkshopsSection() {
         ref={titleRef}
         className="max-w-3xl mx-auto px-6 pt-20"
       >
-        <div className="overflow-hidden mb-6">
-          <motion.p
-            className="font-jost text-xs tracking-[0.35em] uppercase opacity-45"
-            style={{ fontWeight: 300 }}
-            initial={{ y: "110%" }}
-            animate={inView ? { y: 0 } : {}}
-            transition={{ duration: 1.4, ease: EASE_LUXURY }}
-          >
-            Chapter 04 · The Hands
-          </motion.p>
-        </div>
-
         <div className="overflow-hidden mb-10">
           <motion.h2
             className="font-cormorant italic leading-none"

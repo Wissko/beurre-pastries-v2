@@ -4,7 +4,6 @@ import FooterSection from "@/components/FooterSection";
 const menuSections = [
   {
     title: "Viennoiserie",
-    eyebrow: "Daily classics",
     items: [
       {
         name: "Croissant",
@@ -25,7 +24,6 @@ const menuSections = [
   },
   {
     title: "Signature bakes",
-    eyebrow: "A little more unexpected",
     items: [
       {
         name: "Cinnamon Monkey Cube",
@@ -41,7 +39,6 @@ const menuSections = [
   },
   {
     title: "Seasonal",
-    eyebrow: "Rotating selection",
     items: [
       {
         name: "Seasonal Specials",
@@ -125,14 +122,8 @@ export default function CollectionPage() {
             >
               <div className="grid gap-8 lg:grid-cols-[0.36fr_1fr] lg:gap-12">
                 <div>
-                  <p
-                    className="font-jost text-[11px] uppercase tracking-[0.34em] opacity-50"
-                    style={{ fontWeight: 300 }}
-                  >
-                    {section.eyebrow}
-                  </p>
                   <h2
-                    className="mt-4 font-cormorant italic leading-[0.95]"
+                    className="font-cormorant italic leading-[0.95]"
                     style={{
                       fontSize: "clamp(34px, 4vw, 58px)",
                       letterSpacing: "-0.02em",

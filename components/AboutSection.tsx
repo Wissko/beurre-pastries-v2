@@ -70,15 +70,6 @@ export default function AboutSection() {
       {/* Right: text */}
       <div className="w-full lg:w-[42%] flex flex-col justify-center px-8 lg:px-16 py-40">
         <RevealText delay={0.1}>
-          <p
-            className="font-jost text-xs tracking-[0.35em] uppercase mb-8 opacity-50"
-            style={{ fontWeight: 300 }}
-          >
-            Chapter 01 · The Beginning
-          </p>
-        </RevealText>
-
-        <RevealText delay={0.25}>
           <h2
             className="font-cormorant italic leading-[0.9] mb-12"
             style={{

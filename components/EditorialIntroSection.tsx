@@ -43,13 +43,6 @@ export default function EditorialIntroSection() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] lg:gap-16">
           <Reveal delay={0.05}>
             <div className="space-y-6 lg:sticky lg:top-20">
-              <p
-                className="font-jost text-[11px] uppercase tracking-[0.38em] opacity-50"
-                style={{ fontWeight: 300 }}
-              >
-                A quiet manifesto
-              </p>
-
               <h2
                 className="font-cormorant leading-[0.92] uppercase"
                 style={{

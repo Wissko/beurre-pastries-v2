@@ -125,20 +125,7 @@ export default function SpecialtiesSection() {
       style={{ backgroundColor: "#ede8e0" }}
     >
       <div className="max-w-4xl mx-auto">
-        {/* Chapter heading */}
         <div ref={titleRef} className="mb-20">
-          <div className="overflow-hidden mb-6">
-            <motion.p
-              className="font-jost text-xs tracking-[0.35em] uppercase opacity-45"
-              style={{ fontWeight: 300 }}
-              initial={{ y: "110%" }}
-              animate={titleInView ? { y: 0 } : {}}
-              transition={{ duration: 1.4, ease: EASE_LUXURY }}
-            >
-              Chapter 02 · The Craft
-            </motion.p>
-          </div>
-
           <div className="overflow-hidden">
             <motion.h2
               className="font-cormorant italic leading-none"
