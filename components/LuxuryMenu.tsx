@@ -9,11 +9,14 @@ const EASE_LUXURY = [0.22, 1, 0.36, 1] as const;
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "The Beginning", href: "/about" },
   { label: "The Collection", href: "/collection" },
   { label: "Find Us", href: "/visit" },
-  { label: "The Atelier", href: "/atelier" },
-  { label: "Contact", href: "/contact" },
+  {
+    label: "Gift Card",
+    href: "https://app.gift-it.com.au/buy/beurrepastries?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnjmPyCx0jxIcIS-ibTAu936YNiaazqc45R_mdOxIGKRWOI67YpvPcEH5U93g_aem_kk4YdqApPPkO1HbCur9ZuQ",
+    external: true,
+  },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export default function LuxuryMenu() {
@@ -136,6 +139,8 @@ export default function LuxuryMenu() {
                       href={item.href}
                       className="flex items-center justify-between py-4 md:py-6"
                       style={{ textDecoration: "none" }}
+                      target={item.external ? "_blank" : undefined}
+                      rel={item.external ? "noopener noreferrer" : undefined}
                     >
                       <span
                         className="font-cormorant italic"
