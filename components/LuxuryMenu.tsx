@@ -177,7 +177,7 @@ export default function LuxuryMenu() {
                 className="font-jost text-[10px] tracking-[0.35em] uppercase"
                 style={{ color: "#f0ede8", opacity: 0.25, fontWeight: 300 }}
               >
-                Park Road · Milton · Brisbane · @beurrepastriesbne
+                33 Park Rd · Milton QLD 4064 · @beurrepastriesbne
               </p>
             </motion.div>
           </motion.div>

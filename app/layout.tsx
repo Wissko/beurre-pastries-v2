@@ -19,14 +19,14 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "beurre. PASTRIES. Park Road, Milton, Brisbane",
+  title: "beurre. PASTRIES. 33 Park Rd, Milton QLD 4064",
   description:
-    "Artisan pastries by Will Leung. Croissants, viennoiseries and seasonal creations. Park Road, Milton, Brisbane. Bear Bones Coffee.",
+    "Artisan pastries by Will Leung. Croissants, viennoiseries and seasonal creations. 33 Park Rd, Milton QLD 4064, Australia. Bear Bones Coffee.",
   keywords:
-    "beurre pastries, artisan pastries, Brisbane, Milton, croissant, viennoiserie, Will Leung",
+    "beurre pastries, artisan pastries, Brisbane, Milton, Park Road, croissant, viennoiserie, Will Leung",
   openGraph: {
     title: "beurre. PASTRIES",
-    description: "Artisan pastries. Park Road · Milton · Brisbane.",
+    description: "Artisan pastries. 33 Park Rd · Milton QLD 4064.",
     type: "website",
   },
 };

@@ -61,7 +61,7 @@ export default function HeroSection() {
           animate={{ opacity: 0.6, y: 0 }}
           transition={{ duration: 1.6, delay: 0.4, ease: EASE_LUXURY }}
         >
-          Park Road · Milton · Brisbane
+          33 Park Rd · Milton QLD 4064
         </motion.p>
 
         {/* Main title - curtain lift */}

@@ -85,9 +85,9 @@ export default function VisitSection() {
               className="font-cormorant italic leading-snug"
               style={{ fontSize: "28px", color: "#1a1208" }}
             >
-              Park Road
+              33 Park Rd
               <br />
-              Milton, Brisbane
+              Milton QLD 4064, Australia
             </p>
             <p
               className="font-jost opacity-50 mt-3"

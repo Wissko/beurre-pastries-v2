@@ -12,9 +12,9 @@ const hours = [
   { day: "Mon – Tue", time: "Closed" },
 ];
 
-const locationLabel = "Park Road, Milton, Brisbane";
+const locationLabel = "33 Park Rd, Milton QLD 4064, Australia";
 const locationNote = "Opposite La Dolce Vita";
-const mapsQuery = encodeURIComponent(`${locationLabel} ${locationNote}`);
+const mapsQuery = encodeURIComponent(locationLabel);
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
 
 export default function VisitPage() {
@@ -73,7 +73,7 @@ export default function VisitPage() {
             >
               <p className="font-jost text-xs tracking-[0.3em] uppercase opacity-35 mb-7" style={{ fontWeight: 300 }}>Location</p>
               <p className="font-cormorant italic leading-snug mb-3" style={{ fontSize: "30px", color: "#1a1208" }}>
-                Park Road<br />Milton, Brisbane
+                33 Park Rd<br />Milton QLD 4064, Australia
               </p>
               <p className="font-jost opacity-40 mt-2" style={{ fontSize: "13px", fontWeight: 300 }}>{locationNote}</p>
               <a

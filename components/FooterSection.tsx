@@ -49,7 +49,7 @@ export default function FooterSection() {
             className="font-jost text-xs tracking-[0.3em] uppercase opacity-40"
             style={{ fontWeight: 300 }}
           >
-            Park Road · Milton · Brisbane
+            33 Park Rd · Milton QLD 4064
           </p>
           <p
             className="font-jost text-xs opacity-30 mt-2"
